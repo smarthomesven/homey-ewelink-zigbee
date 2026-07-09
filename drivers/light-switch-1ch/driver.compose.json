@@ -1,0 +1,38 @@
+{
+  "name": {
+    "en": "Smart Switch 1CH"
+  },
+  "class": "light",
+  "capabilities": [
+    "onoff"
+  ],
+  "platforms": [
+    "local"
+  ],
+  "zigbee": {
+    "manufacturerName": "eWeLink",
+    "productId": [
+      "ZB-SW01"
+    ],
+    "endpoints": {
+      "1": {
+        "clusters": [0, 4, 5, 6],
+        "bindings": [6]
+      }
+    },
+    "learnmode": {
+      "image": "/drivers/light-switch-1ch/assets/learnmode.svg",
+      "instruction": {
+        "en": "Press and hold the switch button for 5 seconds until the LED starts blinking."
+      }
+    }
+  },
+  "connectivity": [
+    "zigbee"
+  ],
+  "images": {
+    "small": "{{driverAssetsPath}}/images/small.png",
+    "large": "{{driverAssetsPath}}/images/large.png",
+    "xlarge": "{{driverAssetsPath}}/images/xlarge.png"
+  }
+}

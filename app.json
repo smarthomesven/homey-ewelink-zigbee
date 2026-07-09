@@ -1,0 +1,83 @@
+{
+  "_comment": "This file is generated. Please edit .homeycompose/app.json instead.",
+  "id": "cc.ewelink.zigbee",
+  "version": "1.0.0",
+  "compatibility": ">=12.4.0",
+  "sdk": 3,
+  "runtime": "nodejs",
+  "platforms": [
+    "local"
+  ],
+  "name": {
+    "en": "eWeLink Zigbee"
+  },
+  "description": {
+    "en": "Adds support for generic eWeLink Zigbee devices"
+  },
+  "brandColor": "#1976D2",
+  "category": [
+    "appliances"
+  ],
+  "source": "https://github.com/smarthomesven/homey-ewelink-zigbee",
+  "bugs": {
+    "url": "https://github.com/smarthomesven/homey-ewelink-zigbee/issues"
+  },
+  "permissions": [],
+  "images": {
+    "small": "/assets/images/small.png",
+    "large": "/assets/images/large.png",
+    "xlarge": "/assets/images/xlarge.png"
+  },
+  "author": {
+    "name": "Sven Serlier",
+    "email": "sven@dypodex.com"
+  },
+  "drivers": [
+    {
+      "name": {
+        "en": "Smart Switch 1CH"
+      },
+      "class": "light",
+      "capabilities": [
+        "onoff"
+      ],
+      "platforms": [
+        "local"
+      ],
+      "zigbee": {
+        "manufacturerName": "eWeLink",
+        "productId": [
+          "ZB-SW01"
+        ],
+        "endpoints": {
+          "1": {
+            "clusters": [
+              0,
+              4,
+              5,
+              6
+            ],
+            "bindings": [
+              6
+            ]
+          }
+        },
+        "learnmode": {
+          "image": "/drivers/light-switch-1ch/assets/learnmode.svg",
+          "instruction": {
+            "en": "Press and hold the switch button for 5 seconds until the LED starts blinking."
+          }
+        }
+      },
+      "connectivity": [
+        "zigbee"
+      ],
+      "images": {
+        "small": "/drivers/light-switch-1ch/assets/images/small.png",
+        "large": "/drivers/light-switch-1ch/assets/images/large.png",
+        "xlarge": "/drivers/light-switch-1ch/assets/images/xlarge.png"
+      },
+      "id": "light-switch-1ch"
+    }
+  ]
+}

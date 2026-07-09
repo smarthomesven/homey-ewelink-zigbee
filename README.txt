@@ -1,0 +1,1 @@
+Connect your generic eWeLink-based Zigbee devices to Homey. Many devices are based on eWeLink, this app adds support for these devices to Homey.
